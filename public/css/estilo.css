@@ -213,7 +213,7 @@ select {
   }
 }
 
-@media only screen and (min-width: 361px) and (max-width: 480px) {
+@media only screen and (min-width: 381px) and (max-width: 480px) {
   #titulo {
     font-family: "Montserrat", sans-serif;
     color: #fdfffc;
