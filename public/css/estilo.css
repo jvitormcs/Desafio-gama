@@ -1,0 +1,332 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p.nomeAreas {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+}
+header {
+  padding: 10px;
+  width: 50%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+hr {
+  width: 100%;
+  color: #fdfffc;
+}
+
+form hr {
+  width: 53%;
+  color: #fdfffc;
+}
+
+header nav ul li {
+  display: flex;
+  padding: 10px;
+}
+
+nav ul li a {
+  color: #fdfffc;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  transition: 400ms;
+  color: #ff9f1c;
+  text-decoration: none;
+}
+
+#titulo {
+  font-family: "Montserrat", sans-serif;
+  color: #fdfffc;
+  margin-left: 4%;
+}
+
+#subtitulo {
+  font-family: "Montserrat", sans-serif;
+  color: #fdfffc;
+  margin-left: 12%;
+}
+
+fieldset {
+  border: 0;
+}
+
+body {
+  background-color: #011627;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: #fdfffc;
+  margin-left: 33.5%;
+  margin-top: 2%;
+  justify-content: center;
+}
+
+.campo textarea{
+    resize: none;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: sans-serif;
+  font-size: 1em;
+  color: #011627;
+  border-radius: 5px;
+}
+
+.grupo:before,
+.grupo:after {
+  display: table;
+}
+
+.grupo:after {
+  clear: both;
+}
+
+.campo {
+  margin-bottom: 1em;
+}
+
+.campo label {
+  margin-bottom: 0.2em;
+  color: #fdfffc;
+  display: block;
+}
+
+fieldset.grupo {
+  margin-top: 1%;
+}
+
+fieldset.grupo .campo {
+  float: left;
+  margin-right: 1em;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo select,
+.campo textarea {
+  padding: 0.2em;
+  border: 1px solid #03355e;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.campo select option {
+  padding-right: 1em;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  background: #fdfffc;
+}
+
+.botao {
+  font-size: 1.2em;
+  background: #f71735;
+  border: none;
+  margin-bottom: 1em;
+  color: #fdfffc;
+  padding: 0.2em;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin-left: 7em;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: 20%;
+}
+
+.botao:hover {
+  transition: 450ms;
+  background: #ff9f1c;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+}
+
+.botao,
+select {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 380px) {
+  p.nomeAreas {
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  strong {
+      font-weight: 500;
+  }
+
+  textarea {
+    width: 80%;
+}
+
+  #titulo {
+    font-family: "Montserrat", sans-serif;
+    color: #fdfffc;
+    margin-left: 6%;
+    font-size: 20px;
+  }
+  #subtitulo {
+    font-family: "Montserrat", sans-serif;
+    color: #fdfffc;
+    margin-left: 14%;
+    font-size: 13px;
+  }
+  body {
+    margin-left: 10%;
+    margin-top: 2%;
+  }
+
+  header {
+    padding: 10px;
+    width: 80%;
+  }
+
+  form hr {
+    width: 83%;
+  }
+
+  .botao {
+    margin-left: 3.5em;
+    width: 40%;
+  }
+
+  fieldset.grupo {
+    margin-top: 2%;
+  }
+}
+
+@media only screen and (min-width: 361px) and (max-width: 480px) {
+  #titulo {
+    font-family: "Montserrat", sans-serif;
+    color: #fdfffc;
+    margin-left: 4%;
+    font-size: 25px;
+  }
+  #subtitulo {
+    font-family: "Montserrat", sans-serif;
+    color: #fdfffc;
+    margin-left: 12%;
+  }
+  body {
+    margin-left: 10%;
+    margin-top: 2%;
+  }
+
+  header {
+    padding: 10px;
+    width: 80%;
+  }
+
+  form hr {
+    width: 83%;
+  }
+
+  textarea {
+      width: 80%;
+  }
+
+  .botao {
+    margin-left: 5em;
+    width: 30%;
+  }
+
+  fieldset.grupo {
+    margin-top: 2%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #titulo {
+    font-family: "Montserrat", sans-serif;
+    color: #fdfffc;
+    margin-left: 4%;
+    font-size: 25px;
+  }
+  textarea {
+    width: 80%;
+}
+  #subtitulo {
+    font-family: "Montserrat", sans-serif;
+    color: #fdfffc;
+    margin-left: 12%;
+  }
+  body {
+    margin-left: 15%;
+    margin-top: 2%;
+  }
+
+  header {
+    padding: 10px;
+    width: 80%;
+  }
+
+  form hr {
+    width: 83%;
+  }
+
+  .botao {
+    margin-left: 4.7em;
+    width: 30%;
+  }
+
+  fieldset.grupo {
+    margin-top: 2%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #titulo {
+      font-family: "Montserrat", sans-serif;
+      color: #fdfffc;
+      margin-left: 25%;
+      font-size: 25px;
+    }
+    #subtitulo {
+      font-family: "Montserrat", sans-serif;
+      color: #fdfffc;
+      margin-left: 29%;
+    }
+    
+  
+    header {
+      padding: 10px;
+      width: 80%;
+    }
+    body {
+        margin-left: 10%;
+        margin-top: 2%;
+      }
+  
+    form hr {
+      width: 83%;
+    }
+  
+    .botao {
+      margin-left: 13em;
+      width: 30%;
+    }
+  
+    fieldset.grupo {
+      margin-top: 2%;
+  
+      margin-left: 20%;
+    }
+  }

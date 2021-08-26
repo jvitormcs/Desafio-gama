@@ -1,0 +1,237 @@
+
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Serviços</a></li>
+        </ul>
+      </nav>
+      <hr />
+    </header>
+
+    <div>
+      <h1 id="titulo">Cadastro de Currículo</h1>
+      <p id="subtitulo">Complete suas informações</p>
+      <br />
+    </div>
+
+    <form>
+      <p class="nomeAreas">Dados Pessoais</p>
+      <hr />
+      <fieldset class="grupo">
+        <div class="campo">
+          <label for="nome"><strong>Nome</strong></label>
+          <input type="text" name="nome" id="nome" required />
+        </div>
+
+        <div class="campo">
+          <label for="sobrenome"><strong>Sobrenome</strong></label>
+          <input type="text" name="sobrenome" id="sobrenome" required />
+        </div>
+      </fieldset>
+
+      <fieldset class="grupo">
+        <div class="campo">
+          <label for="email"><strong>Email</strong></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="exemplo@exemplo.com"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label for="cpf"><strong>CPF</strong></label>
+          <input
+            type="text"
+            name="cpf"
+            id="cpf"
+            maxlength="11"
+            placeholder="Ex.: 000.000.000-00"
+            required
+          />
+        </div>
+      </fieldset>
+
+      <fieldset class="grupo">
+        <div class="campo">
+          <label for="nascimento"><strong>Data de Nascimento</strong></label>
+          <input
+            type="date"
+            name="nascimento"
+            id="nascimento"
+            maxlength="8"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label for="estadocivil"><strong>Estado Civil</strong></label>
+          <select id="estadocivil" required>
+            <option value="1" selected disabled>Selecione</option>
+            <option value="2">Solteiro(a)</option>
+            <option value="3">União Estável</option>
+            <option value="4">Casado(a)</option>
+            <option value="5">Divorciado(a)</option>
+            <option value="6">Viúvo(a)</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="sexo"> <strong>Sexo </strong></label>
+          <select id="sexo" name="sexo">
+            <option value="1" selected disabled>Selecione</option>
+            <option value="2">Masculino</option>
+            <option value="3">Feminino</option>
+            <option value="4">Transgênero</option>
+            <option value="5">Não binário</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <p class="nomeAreas">Endereço</p>
+      <hr />
+      <fieldset class="grupo">
+        <div class="campo">
+          <label for="cep"><strong>CEP/Codigo Postal</strong></label>
+          <input
+            type="text"
+            id="cep"
+            name="cep"
+            maxlength="8"
+            placeholder="Ex.: 00000-000"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label for="endereco"><strong>Endereço</strong></label>
+          <input type="text" id="endereco" name="endereco" required />
+        </div>
+      </fieldset>
+
+      <fieldset class="grupo">
+        <div class="campo">
+          <label for="bairro"><strong>Bairro</strong></label>
+          <input type="text" id="bairro" name="bairro" required />
+
+        </div>
+        <div class="campo">
+          <label for="estado"><strong>Número</strong></label>
+          <input type="text" id="numero" name="numero" required />
+        </div>
+
+        
+        <br />
+      </fieldset>
+      
+      <fieldset class="grupo">
+
+        <div class="campo">
+          <label for="cidade"><strong>Complemento</strong></label>
+          <input type="text" id="complemento" name="complemento"/>
+        </div>
+
+        <div class="campo">
+          <label for="cidade"><strong>Cidade</strong></label>
+          <input type="text" id="cidade" name="cidade" required />
+        </div>
+
+      </fieldset>
+
+      <fieldset class="grupo">
+        <div class="campo">
+          <label for="estado"><strong>Estado</strong></label>
+          <input type="text" id="estado" name="estado" required />
+        </div>
+      </fieldset>
+
+      <p class="nomeAreas">Contato</p>
+      <hr />
+
+      <fieldset class="grupo">
+        <div class="campo">
+          <label><strong>Celular</strong></label>
+          <input
+            type="text"
+            id="celular"
+            name="celular"
+            placeholder="1191234-5678"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label><strong>Telefone</strong></label>
+          <input
+            type="text"
+            id="telefone"
+            name="telefone"
+            placeholder="114444-4444"
+            required
+          />
+        </div>
+      </fieldset>
+
+      <fieldset class="grupo">
+        <div class="campo">
+          <label><strong>Telefone de Recado</strong></label>
+          <input
+            type="text"
+            id="celular"
+            name="celular"
+            placeholder="1191234-5678"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label for="email"><strong>Email de Recados</strong></label>
+          <input
+            type="email"
+            name="emailcontato"
+            id="email"
+            placeholder="exemplo@exemplo.com"
+            required
+          />
+        </div>
+      </fieldset>
+
+      <p class="nomeAreas">Escolaridade</p>
+      <hr />
+
+      <fieldset class="grupo">
+        <div class="campo">
+          <label for="escolaridade"><strong>Nivel de Escolaridade</strong></label>
+          <select id="escolaridade" required>
+            <option value="1" selected disabled>Selecione</option>
+            <option value="2">Fundamental Incompleto</option>
+            <option value="3">Fundamental Completo</option>
+            <option value="4">Ensino Médio Incompleto</option>
+            <option value="5">Ensino Médio Completo</option>
+            <option value="6">Cursando Superior</option>
+            <option value="7">Superior Incompleto</option>
+            <option value="7">Superior Completo</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <p class="nomeAreas">Competências</p>
+      <hr />
+
+      <fieldset class="grupo">
+
+      <div class="campo">
+        <label for="competências">Faça um resumo sobre suas habilidades</label>
+        <textarea name="" id="" cols="55" rows="6" maxlength="500" required></textarea>
+      </div>
+      
+      </fieldset>
+
+      <button class="botao" type="submit" onsubmit="">Concluído</button>
+    </form>
