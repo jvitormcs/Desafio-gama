@@ -12,7 +12,7 @@ const path = require('path')
     app.engine('handlebars', handlebars({defaultLayout: 'main'}));
         app.set('view engine', 'handlebars');
 
-    mongoose.connect('mongodb+srv://root:@cluster0.ssr17.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+    mongoose.connect('mongodb+srv://root:Mafa2012@cluster0.ssr17.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
         useNewUrlParser: true,
         useCreateIndex: true
        

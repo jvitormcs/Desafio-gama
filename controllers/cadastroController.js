@@ -1,4 +1,4 @@
-const usuarios = require('../models/Cadastro')
+const Usuarios = require('../models/Cadastro');
 
 
 module.exports = {
@@ -8,7 +8,8 @@ module.exports = {
             sexo, bairro, numero, complemento, cidade,
             estado, celular, telefone, telefonecontato, emailcontato, escolaridade, competencias
             } = req.body; 
-        const novoCadastro = new usuario();
+
+        const novoCadastro = new Usuarios({});
 
         novoCadastro.nome = nome;
         novoCadastro.sobrenome = sobrenome; 
@@ -36,6 +37,6 @@ module.exports = {
             };
 
             return res.status(200).send(candidatoSalvo)
-        }) ;
-    }
+        });
+    },
 };

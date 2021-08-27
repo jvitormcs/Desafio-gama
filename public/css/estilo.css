@@ -126,6 +126,11 @@ fieldset.grupo .campo {
   display: block;
 }
 
+button a {
+  text-decoration: none;
+  color: #fdfffc;
+}
+
 .campo select option {
   padding-right: 1em;
 }

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const Cadastro = new Schema({
+const CadastroSchema = new Schema({
     nome: {
         type: String,
         required: true
@@ -106,4 +106,5 @@ const Cadastro = new Schema({
     timestamps:true
 });
 
-module.export = mongoose.model('usuarios', Cadastro)
+const Usuarios  = mongoose.model('Usuarios', CadastroSchema)
+module.export = { Usuarios }
