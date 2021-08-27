@@ -1,42 +1,47 @@
-const Usuarios = require('../models/Cadastro');
+const mongoose = require('mongoose');
+const usuario = mongoose.model('usuarios');
+require('../models/Cadastro');
 
 
-module.exports = {
+class CandidateConcroller {
     async registro(req, res) {
 
         const {nome, sobrenome, email, cpf, nascimento, estadocivil,
-            sexo, bairro, numero, complemento, cidade,
+            sexo, cep, endereco, bairro, numero, complemento, cidade,
             estado, celular, telefone, telefonecontato, emailcontato, escolaridade, competencias
             } = req.body; 
 
-        const novoCadastro = new Usuarios({});
+        const novoCadastro = {
 
-        novoCadastro.nome = nome;
-        novoCadastro.sobrenome = sobrenome; 
-        novoCadastro.email = email;
-        novoCadastro.cpf = cpf;
-        novoCadastro.nascimento = nascimento;
-        novoCadastro.estadocivil = estadocivil;
-        novoCadastro.sexo = sexo;
-        novoCadastro.bairro = bairro;
-        novoCadastro.numero = numero;
-        novoCadastro.complemento = complemento;
-        novoCadastro.cidade = cidade;
-        novoCadastro.estado = estado;
-        novoCadastro.celular = celular;
-        novoCadastro.telefone = telefone
-        novoCadastro.telefonecontato = telefonecontato;
-        novoCadastro.emailcontato = emailcontato;
-        novoCadastro.escolaridade = escolaridade;
-        novoCadastro.competencias = competencias;
+        nome,
+        sobrenome,
+        email,
+        cpf,
+        nascimento,
+        estadocivil,
+        sexo,
+        cep,
+        endereco,
+        bairro,
+        numero,
+        complemento,
+        cidade,
+        estado,
+        celular,
+        telefone,
+        telefonecontato,
+        emailcontato,
+        escolaridade,
+       competencias
+        }
 
-        novoCadastro.save((erro, candidatoSalvo) => {
+        await usuario.create(novoCadastro, (erro) => {
             if (erro) {
                 console.log(erro);
-                return res.status(500).send();
+                return res.status(400).send();
             };
-
-            return res.status(200).send(candidatoSalvo)
+            return res.status(200).redirect('/concluido')
         });
-    },
+    }
 };
+module.exports = new CandidateConcroller();

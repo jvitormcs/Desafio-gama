@@ -106,4 +106,4 @@ const CadastroSchema = new Schema({
     timestamps:true
 });
 
-module.export = mongoose.model('Usuarios', CadastroSchema)
+module.export = mongoose.model('usuarios', CadastroSchema)

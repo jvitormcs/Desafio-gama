@@ -14,7 +14,6 @@ const path = require('path')
 
     mongoose.connect('mongodb+srv://root:Mafa2012@cluster0.ssr17.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
         useNewUrlParser: true,
-        useCreateIndex: true
        
     }).then(() => {
         console.log('Tô conectado com o Mongo')
