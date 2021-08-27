@@ -71,7 +71,7 @@
 
         <div class="campo">
           <label for="estadocivil"><strong>Estado Civil</strong></label>
-          <select id="estadocivil" required>
+          <select id="estadocivil" name="estadocivil" required>
             <option value="1" selected disabled>Selecione</option>
             <option value="2">Solteiro(a)</option>
             <option value="3">União Estável</option>
@@ -83,7 +83,7 @@
 
         <div class="campo">
           <label for="sexo"> <strong>Sexo </strong></label>
-          <select id="sexo" name="sexo">
+          <select id="sexo" name="sexo" required>
             <option value="1" selected disabled>Selecione</option>
             <option value="2">Masculino</option>
             <option value="3">Feminino</option>
@@ -183,8 +183,8 @@
           <label><strong>Telefone de Recado</strong></label>
           <input
             type="text"
-            id="celular"
-            name="celular"
+            id="telefonecontato"
+            name="telefonecontato"
             minlength="9"
             placeholder="1191234-5678"
             required
@@ -209,7 +209,7 @@
       <fieldset class="grupo">
         <div class="campo">
           <label for="escolaridade"><strong>Nível de Escolaridade</strong></label>
-          <select id="escolaridade" required>
+          <select id="escolaridade" name="escolaridade" required>
             <option value="1" selected disabled>Selecione</option>
             <option value="2">Fundamental Incompleto</option>
             <option value="3">Fundamental Completo</option>
@@ -229,7 +229,7 @@
 
       <div class="campo">
         <label for="competências">Faça um resumo sobre suas habilidades</label>
-        <textarea name="" id="" cols="55" rows="6" maxlength="500" required></textarea>
+        <textarea name="competencias" id="" cols="55" rows="6" maxlength="500" required></textarea>
       </div>
       
       </fieldset>

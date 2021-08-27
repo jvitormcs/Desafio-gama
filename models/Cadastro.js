@@ -15,15 +15,17 @@ const Cadastro = new Schema({
     
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
 
     cpf: {
         type: Number,
-        required: true
+        required: true,
+        unique: true
     },
     
-    nacimento: {
+    nascimento: {
         type: Date,
         required: true
     },
@@ -100,6 +102,8 @@ const Cadastro = new Schema({
         type: String,
         required: true
     },
+}, {
+    timestamps:true
 });
 
-mongoose.model('usuarios', Cadastro)
+module.export = mongoose.model('usuarios', Cadastro)
