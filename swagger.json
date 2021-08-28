@@ -1,34 +1,212 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "API de Cadastro de Currículo",
-        "description": "Essa API de cadastro é uma proposta de desafio da GamaAcademy com o intuito de cadastrar currículos da página JobsNet e armazena-los no banco de dados",
-        "contact": {
-            "email": "vitormouracs@gmail.com"
-        },
-        "version": "1.0.0"
+      "title": "API de Cadastro de Currículo",
+      "description": "Essa API de cadastro é uma proposta de desafio da GamaAcademy com o intuito de cadastrar currículos da página JobsNet e armazena-los no banco de dados",
+      "contact": {
+        "email": "vitormouracs@gmail.com"
+      },
+      "version": "1.0.0"
     },
-
+  
     "servers": [
-        {
-            "url": "http://localhost:8081",
-            "description": "Servidor de Teste"
-        }
+      {
+        "url": "http://localhost:8081",
+        "description": "Servidor de Teste"
+      }
     ],
-
     "paths": {
-        "/": {
-            "get":{
-                "summary": "Pagina Da Home",
-                "description": "Essa rota é responsável de levar até a pagina de home que nos leva para o formulário de cadastro"
-            }
-        },
-        "/cadastro": {
-            "get":{
-                "summary": "Pagina Da Home",
-                "description": "Essa rota é responsável de levar até a pagina de home que nos leva para o formulário de cadastro"
-            }
+      "/": {
+        "get": {
+          "summary": "Pagina Da Home",
+          "description": "Essa rota é responsável de levar até a pagina de home que nos leva para o formulário de cadastro"
         }
+      },
+  
+      "/cadastro": {
+        "get": {
+          "summary": "Pagina De Cadastro de Formulário",
+          "description": "Essa rota é responsável de levar até a pagina do formulário de cadastro"
+        }
+      },
+      "/concluido": {
+        "get": {
+          "summary": "Pagina De Agradecimento Pelo cadastro",
+          "description": "Essa rota que é redirecionada apos o envio das informações para o banco de dados "
+        }
+      },
+      "/cadastro/registrado": {
+        "post": {
+          "summary": "Pagina De Registro do Cadastro do Formulário",
+          "description": "Essa rota pega as informações e leva para o banco de dados guarda-la",
+          "tags": ["Candidatos"],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Candidatos"
+                },
+                "examples": {
+                  "cadastro": {
+                    "value": {
+                      "_id": "612a64c82ef7a49078a20f2e",
+                      "nome": "Jo",
+                      "sobrenome": "Vi",
+                      "email": " vi@dev.com",
+                      "cpf": "11111166666",
+                      "nascimento": "2002-11-02",
+                      "estadocivil": "Solteiro(a)",
+                      "sexo": "Masculino",
+                      "cep": "18130013",
+                      "endereco": "Praça João Pociotti",
+                      "bairro": "Jardim Meny",
+                      "numero": "651",
+                      "complemento": "daf",
+                      "cidade": "São Roque",
+                      "estado": "SP",
+                      "celular": "11988556644",
+                      "telefone": "1166557788",
+                      "telefonecontato": "1144223366",
+                      "emailcontato": "jo@dev.com",
+                      "escolaridade": "Cursando Superior",
+                      "competencias": "Só um exemplo"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Usuário cadastrado com sucesso!",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "$ref": "#/components/schemas/Candidatos"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Usuário já cadastrado!"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Candidatos": {
+          "type": "object",
+          "properties": {
+            "id":{
+                "type": "string",
+                "format": "uuid"
+              },
+            "nome": {
+              "type": "string",
+              "required": true
+            },
+  
+            "sobrenome": {
+              "type": "string",
+              "required": true
+            },
+  
+            "email": {
+              "type": "string",
+              "required": true,
+              "unique": true
+            },
+  
+            "cpf": {
+              "type": "number",
+              "required": true,
+              "unique": true
+            },
+  
+            "nascimento": {
+              "type": "string",
+              "format": "date",
+              "required": true
+            },
+            "estadocivil": {
+              "type": "string",
+              "required": true
+            },
+  
+            "sexo": {
+              "type": "string",
+              "required": true
+            },
+  
+            "cep": {
+              "type": "number",
+              "required": true
+            },
+  
+            "endereco": {
+              "type": "string",
+              "required": true
+            },
+  
+            "bairro": {
+              "type": "string",
+              "required": true
+            },
+  
+            "numero": {
+              "type": "number",
+              "required": true
+            },
+  
+            "complemento": {
+              "type": "string"
+            },
+  
+            "cidade": {
+              "type": "string",
+              "required": true
+            },
+  
+            "estado": {
+              "type": "string",
+              "required": true
+            },
+  
+            "celular": {
+              "type": "number",
+              "required": true
+            },
+  
+            "telefone": {
+              "type": "number",
+              "required": true
+            },
+  
+            "telefonecontato": {
+              "type": "number",
+              "required": true
+            },
+  
+            "emailcontato": {
+              "type": "string",
+              "required": true
+            },
+  
+            "escolaridade": {
+              "type": "string",
+              "required": true
+            },
+  
+            "competencias": {
+              "type": "string",
+              "required": true
+            }
+          }
+        }
+      }
     }
-
-}
+  }
+  
