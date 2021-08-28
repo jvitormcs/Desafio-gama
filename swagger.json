@@ -22,6 +22,12 @@
                 "summary": "Pagina Da Home",
                 "description": "Essa rota é responsável de levar até a pagina de home que nos leva para o formulário de cadastro"
             }
+        },
+        "/cadastro": {
+            "get":{
+                "summary": "Pagina Da Home",
+                "description": "Essa rota é responsável de levar até a pagina de home que nos leva para o formulário de cadastro"
+            }
         }
     }
 
