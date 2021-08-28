@@ -38,7 +38,7 @@ class CandidateConcroller {
         await usuario.create(novoCadastro, (erro) => {
             if (erro) {
                 console.log(erro);
-                return res.status(400).send();
+                return res.status(400).send('Usuário já cadastrado');
             };
             return res.status(200).redirect('/concluido')
         });
