@@ -1,0 +1,28 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de Cadastro de Currículo",
+        "description": "Essa API de cadastro é uma proposta de desafio da GamaAcademy com o intuito de cadastrar currículos da página JobsNet e armazena-los no banco de dados",
+        "contact": {
+            "email": "vitormouracs@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+
+    "servers": [
+        {
+            "url": "http://localhost:8081",
+            "description": "Servidor de Teste"
+        }
+    ],
+
+    "paths": {
+        "/": {
+            "get":{
+                "summary": "Pagina Da Home",
+                "description": "Essa rota é responsável de levar até a pagina de home que nos leva para o formulário de cadastro"
+            }
+        }
+    }
+
+}

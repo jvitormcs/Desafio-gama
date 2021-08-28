@@ -2,12 +2,16 @@ const express = require('express');
 const handlebars = require('express-handlebars');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const swaggerUi = require('swagger-ui-express')
 const app = express();
 const cadastro = require('./routes/cadastro');
+const swaggerDocs = require('./swagger.json');
 const path = require('path')
 
     app.use(bodyParser.urlencoded({extended: true}))
     app.use(bodyParser.json())
+
+    app.use('/docs-api', swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 
     app.engine('handlebars', handlebars({defaultLayout: 'main'}));
         app.set('view engine', 'handlebars');
