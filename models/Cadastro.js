@@ -85,12 +85,10 @@ const CadastroSchema = new Schema({
     
     telefonecontato: {
         type: Number,
-        required: true
     },
     
     emailcontato: {
         type: String,
-        required: true
     },
     
     escolaridade: {
