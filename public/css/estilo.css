@@ -194,6 +194,10 @@ button a {
   margin-left: 15%;
 }
 
+footer {
+  margin-left: -10.5%;
+}
+
 @media only screen and (max-width: 380px) {
   p.nomeAreas {
     font-size: 1em;
@@ -269,6 +273,11 @@ button a {
   .concluido button {
     margin-left: 24%;
   }
+
+  footer {
+    margin-left: -4%;
+    margin-right: 4%;
+  }
 }
 
 @media only screen and (min-width: 381px) and (max-width: 480px) {
@@ -334,6 +343,11 @@ button a {
   }
   .concluido button {
     margin-left: 24%;
+  }
+
+  footer {
+    margin-left: -4%;
+    margin-right: 4%;
   }
   
 }
@@ -401,6 +415,10 @@ button a {
   .concluido button {
     margin-left: 16%;
   }
+  footer {
+    margin-left: -5%;
+    margin-right: 4%;
+  }
 }
 
 
@@ -463,12 +481,16 @@ button a {
     }
     .home p {
       margin-top: 2%;
-      margin-left: -5%;
+      margin-left: 0%;
     }
     .concluido button {
       margin-left: 10%;
     }
     .home button {
-      margin-left: 13%;
+      margin-left: 15%;
+    }
+    footer {
+      margin-left: 12%;
+      margin-right: 4%;
     }
   }
